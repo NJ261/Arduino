@@ -1,11 +1,11 @@
 #include <dht.h>
 #include <Bridge.h>
 #include <HttpClient.h>
-#define dht_dpin A0 //no ; here. Set equal to channel sensor is on
+#define dht_dpin A0 // DHT sensor data pin
 
 dht DHT;
 int led = 12;                // the pin that the LED is atteched to
-int sensor = 2;              // the pin that the sensor is atteched to
+int sensor = 2;              // the pin that the sensor is attached to
 int state = LOW;             // by default, no motion detected
 int val = 0;                 // variable to store the sensor status (value)
 String motion;
@@ -50,8 +50,7 @@ void loop(){
   String dataString;
   dataString += getTimeStamp();
   client.get("http://www.dweet.io/dweet/for/Ignite?Temperature="+String(DHT.temperature)+"&Humidity="+String(DHT.humidity)+"&Motion="+String(motion)+"&TimeStamp="+String(dataString));
-// from the server, read response and print at the console:
-  int i=0; // for degugging
+  int i=0; 
   delay(1000);
   while (client.available()) {
   char c = client.read();
