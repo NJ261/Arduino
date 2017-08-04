@@ -6,12 +6,12 @@ Servo myservo2;
 int pos = 75;    // variable to store the servo's starting position
 int pos2 = 75; 
 
-const int maxDeg = 150; // limits the maximum range of the servo's movement to 175
-const int minDeg = 30;   // limits the minimum range of the servo's movement to 5
+const int maxDeg = 150; // limits the maximum range of the servo's movement
+const int minDeg = 30;   // limits the minimum range of the servo's movement 
 
 const int movement = 2; // distance to move servo
 
-// This basically means the servo will sweep from 5 to 175 (not 0 to 180 as expected), you can adjust this to suit your own servo motors specs
+// This basically means the servo will sweep from 30 to 150 (not 0 to 180 as expected), you can adjust this to suit your own servo motors specs
 
 const int leftPin = 2; // tells the Arduino the location of  the signal cable from the switch 
 const int rightPin = 3;
@@ -80,15 +80,3 @@ rightPressed2 = digitalRead(rightPin2);
       myservo2.write(pos2);              
       } 
 }
-
-
-
-
-
-
-
-
-
-
-
-
