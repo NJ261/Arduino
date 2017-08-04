@@ -22,7 +22,6 @@ const int rightPin2 = 5;
 const int outputPin = 8; // tells the Arduino the location of the signal cable to the servo 
 const int outputPin2 = 9; 
 
-
 int leftPressed = 0; // variables we will use to keep information about the switch states
 int rightPressed = 0;
 
@@ -33,7 +32,6 @@ void setup()
 { 
 myservo.attach(outputPin);  // attaches the servo motor's signal cable location, stored in the variable outputPin, to the servo object 
 myservo2.attach(outputPin2);
-
 
 pinMode(leftPin, INPUT); // sets the state of the pins to input mode
 pinMode(rightPin, INPUT);
